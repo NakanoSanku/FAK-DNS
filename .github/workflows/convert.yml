@@ -27,6 +27,9 @@ jobs:
         THE_DNS: ${{ secrets.THE_DNS }}
       run: python convert.py
 
+    - name: Convert Conf Files SmartDNS
+      run: python convert_smartdns.py
+
     - name: Check for changes
       run: |
         if ! git diff --quiet; then
