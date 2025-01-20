@@ -27,6 +27,10 @@ jobs:
         THE_DNS: ${{ secrets.THE_DNS }}
       run: python convert.py
 
+    - name: Convert Conf Files
+      run: python convert_smartdns.py
+
+
     - name: Create Artifacts
       uses: actions/upload-artifact@v2
       with:
